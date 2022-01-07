@@ -1,5 +1,6 @@
 import time
 from socket import *
+from FileTransferTransform.FileToBytes import *
 import threading
 from Sock_Base import SockBase
 from ClientAttribute import ClientInfo
@@ -32,48 +33,59 @@ class Server(SockBase):
             self.connect_clients[ID] = C
             C.recvTD=self.Recv_TD(tcpCliSock,ID)
             C.sendTD=self.Send_TD(tcpCliSock,ID)
-
             ID+=1
 
     # 接收线程 收到的发给对方
     def Recv_Loop(self, sock, ID):
-        while True:
-            ret = sock.recv(self.bufsize)
-            #已连接
-            if self.connect_clients[ID].ConnectID != None:
-                self.connect_clients[self.connect_clients[ID].ConnectID].sendMessage=str(ret, encoding="utf-8")
-                print(self.connect_clients[self.connect_clients[ID].ConnectID].sendMessage)
-                continue
-            #连接
-            if str(ret, encoding="utf-8")[:4]=="conn":
-                if self.connect_clients[ID].ConnectID!=None:
-                    sock.send("目标正在通话中".encode())
-                else:
-                    # 强制被动连接
-                    self.connect_clients[ID].ConnectID=int(str(ret, encoding="utf-8")[4:])
-                    self.connect_clients[int(str(ret, encoding="utf-8")[4:])].ConnectID=ID
-                    self.isChatting.extend([ID,int(str(ret, encoding="utf-8")[4:])])
-                    sock.send("已连接".encode())
+        try:
+            while True:
+                ret = sock.recv(self.bufsize)
+                #已连接
+                if self.connect_clients[ID].ConnectID != None:
+                    self.connect_clients[self.connect_clients[ID].ConnectID].sendMessage=str(ret, encoding="utf-8")
+                    print(self.connect_clients[self.connect_clients[ID].ConnectID].sendMessage)
+                    continue
 
-            try:
-                print(str(ret, encoding="utf-8"))
-                f=self.ClientCmd[str(ret, encoding="utf-8")]
-                f(sock,ID)
-            except:
-                pass
-            # 未连接
-            # 没发送就阻塞住了
-            print("收到回复:" + str(ret, encoding="utf-8"))
-            time.sleep(1)
+                #连接
+
+
+                if str(ret, encoding="utf-8")[:4]=="conn":
+                    if self.connect_clients[ID].ConnectID!=None:
+                        sock.send("目标正在通话中".encode())
+                    else:
+                        # 强制被动连接
+                        self.connect_clients[ID].ConnectID=int(str(ret, encoding="utf-8")[4:])
+                        self.connect_clients[int(str(ret, encoding="utf-8")[4:])].ConnectID=ID
+                        self.isChatting.extend([ID,int(str(ret, encoding="utf-8")[4:])])
+                        sock.send("已连接".encode())
+                elif str(ret, encoding="utf-8")[:5]=="file:":
+                    self.Recv_File(str(ret, encoding="utf-8")[5:],sock)
+                    continue
+
+
+                try:
+                    print(str(ret, encoding="utf-8"))
+                    f=self.ClientCmd[str(ret, encoding="utf-8")]
+                    f(sock,ID)
+                except:
+                    pass
+                time.sleep(1)
+        except:
+            del self.connect_clients[ID]
+            del self.connect_clients[self.connect_clients[ID].ConnectID]
         sock.close()
     #发送线程
     def Send_Loop(self, sock, ID):
-        while True:
-            if self.connect_clients[ID].sendMessage!="":
-                ret = sock.send(self.connect_clients[ID].sendMessage.encode())
-                self.connect_clients[ID].sendMessage=""
-            # 没发送就阻塞住了
-            time.sleep(1)
+        try:
+            while True:
+                if self.connect_clients[ID].sendMessage!="":
+                    ret = sock.send(self.connect_clients[ID].sendMessage.encode())
+                    self.connect_clients[ID].sendMessage=""
+                # 没发送就阻塞住了
+                time.sleep(1)
+        except:
+            del self.connect_clients[ID]
+            del self.connect_clients[self.connect_clients[ID].ConnectID]
         sock.close()
 
 
@@ -82,6 +94,22 @@ class Server(SockBase):
         cmd="请输入你需要连接的对象:"+",".join([str(i) for i in self.connect_clients.keys() if i!=ID and i not in self.isChatting])
         print("发送了"+cmd)
         ret=sock.send(cmd.encode())
+
+
+    def Recv_File(self,fileName,sock):
+        data=bytes(0)
+        while True:
+            ret=sock.recv(self.bufsize)
+            if "yyend".encode() in ret:
+                data+=ret[:-5]
+                break
+
+            data+=ret
+        bytesTofile(fileName,data)
+        print("finish")
+
+    def Reconnect(self):
+        pass
 
 
 
