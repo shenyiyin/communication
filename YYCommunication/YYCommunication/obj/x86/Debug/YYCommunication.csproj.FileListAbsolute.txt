@@ -1,0 +1,9 @@
+D:\DataVisualization-SYY_Python_Helper\SocketHelper\C# CLIENT\YYCommunication\YYCommunication\obj\x86\Debug\YYCommunication.Form1.resources
+D:\DataVisualization-SYY_Python_Helper\SocketHelper\C# CLIENT\YYCommunication\YYCommunication\obj\x86\Debug\YYCommunication.Properties.Resources.resources
+D:\DataVisualization-SYY_Python_Helper\SocketHelper\C# CLIENT\YYCommunication\YYCommunication\obj\x86\Debug\YYCommunication.csproj.GenerateResource.Cache
+D:\DataVisualization-SYY_Python_Helper\SocketHelper\C# CLIENT\YYCommunication\YYCommunication\bin\Debug\YYCommunication.exe
+D:\DataVisualization-SYY_Python_Helper\SocketHelper\C# CLIENT\YYCommunication\YYCommunication\bin\Debug\YYCommunication.pdb
+D:\DataVisualization-SYY_Python_Helper\SocketHelper\C# CLIENT\YYCommunication\YYCommunication\obj\x86\Debug\YYCommunication.exe
+D:\DataVisualization-SYY_Python_Helper\SocketHelper\C# CLIENT\YYCommunication\YYCommunication\obj\x86\Debug\YYCommunication.pdb
+D:\DataVisualization-SYY_Python_Helper\SocketHelper\C# CLIENT\YYCommunication\YYCommunication\obj\x86\Debug\YYCommunication.csproj.AssemblyReference.cache
+D:\DataVisualization-SYY_Python_Helper\SocketHelper\C# CLIENT\YYCommunication\YYCommunication\obj\x86\Debug\YYCommunication.csproj.CoreCompileInputs.cache

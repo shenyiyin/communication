@@ -1,0 +1,8 @@
+D:\DataVisualization-SYY_Python_Helper\SocketHelper\C# CLIENT\YYCommunication\YYCommunication\bin\x64\Release\YYCommunication.exe
+D:\DataVisualization-SYY_Python_Helper\SocketHelper\C# CLIENT\YYCommunication\YYCommunication\bin\x64\Release\YYCommunication.pdb
+D:\DataVisualization-SYY_Python_Helper\SocketHelper\C# CLIENT\YYCommunication\YYCommunication\obj\x64\Release\YYCommunication.Form1.resources
+D:\DataVisualization-SYY_Python_Helper\SocketHelper\C# CLIENT\YYCommunication\YYCommunication\obj\x64\Release\YYCommunication.Properties.Resources.resources
+D:\DataVisualization-SYY_Python_Helper\SocketHelper\C# CLIENT\YYCommunication\YYCommunication\obj\x64\Release\YYCommunication.csproj.GenerateResource.cache
+D:\DataVisualization-SYY_Python_Helper\SocketHelper\C# CLIENT\YYCommunication\YYCommunication\obj\x64\Release\YYCommunication.csproj.CoreCompileInputs.cache
+D:\DataVisualization-SYY_Python_Helper\SocketHelper\C# CLIENT\YYCommunication\YYCommunication\obj\x64\Release\YYCommunication.exe
+D:\DataVisualization-SYY_Python_Helper\SocketHelper\C# CLIENT\YYCommunication\YYCommunication\obj\x64\Release\YYCommunication.pdb

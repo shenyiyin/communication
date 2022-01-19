@@ -1,0 +1,15 @@
+D:\DataVisualization-SYY_Python_Helper\SocketHelper\C# CLIENT\YYCommunication\YYCommunication\bin\x64\Debug\YYCommunication.exe
+D:\DataVisualization-SYY_Python_Helper\SocketHelper\C# CLIENT\YYCommunication\YYCommunication\bin\x64\Debug\YYCommunication.pdb
+D:\DataVisualization-SYY_Python_Helper\SocketHelper\C# CLIENT\YYCommunication\YYCommunication\obj\x64\Debug\YYCommunication.Form1.resources
+D:\DataVisualization-SYY_Python_Helper\SocketHelper\C# CLIENT\YYCommunication\YYCommunication\obj\x64\Debug\YYCommunication.Properties.Resources.resources
+D:\DataVisualization-SYY_Python_Helper\SocketHelper\C# CLIENT\YYCommunication\YYCommunication\obj\x64\Debug\YYCommunication.csproj.GenerateResource.cache
+D:\DataVisualization-SYY_Python_Helper\SocketHelper\C# CLIENT\YYCommunication\YYCommunication\obj\x64\Debug\YYCommunication.csproj.CoreCompileInputs.cache
+D:\DataVisualization-SYY_Python_Helper\SocketHelper\C# CLIENT\YYCommunication\YYCommunication\obj\x64\Debug\YYCommunication.exe
+D:\DataVisualization-SYY_Python_Helper\SocketHelper\C# CLIENT\YYCommunication\YYCommunication\obj\x64\Debug\YYCommunication.pdb
+D:\DataVisualization-SYY_Python_Helper\SocketHelper\C# CLIENT\YYCommunication\YYCommunication\obj\x64\Debug\YYCommunication.csproj.AssemblyReference.cache
+D:\DataVisualization-SYY_Python_Helper\SocketHelper\C# CLIENT\YYCommunication\YYCommunication\obj\x64\Debug\YYCommunication.VideoWindow.resources
+D:\DataVisualization-SYY_Python_Helper\SocketHelper\C# CLIENT\YYCommunication\YYCommunication\obj\x64\Debug\YYCommunication.TrustInfo.xml
+D:\DataVisualization-SYY_Python_Helper\SocketHelper\C# CLIENT\YYCommunication\YYCommunication\obj\x64\Debug\YYCommunication.exe.manifest
+D:\DataVisualization-SYY_Python_Helper\SocketHelper\C# CLIENT\YYCommunication\YYCommunication\bin\x64\Debug\YYCommunication.exe.manifest
+D:\DataVisualization-SYY_Python_Helper\SocketHelper\C# CLIENT\YYCommunication\YYCommunication\bin\x64\Debug\YYCommunication.application
+D:\DataVisualization-SYY_Python_Helper\SocketHelper\C# CLIENT\YYCommunication\YYCommunication\obj\x64\Debug\YYCommunication.application
