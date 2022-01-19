@@ -22,12 +22,12 @@ class SockBase(object):
     def __init__(self,player="client"):
 
         Server_info = {
-            "IP":"127.0.0.1", #"106.13.10.65","127.0.0.1"
+            "IP":"127.0.0.1",
             "PORT": 5089,
             "BUFSIZE": 512,
         }
         client_info = {
-            "IP": "127.0.0.1",  # "106.13.10.65",
+            "IP": "127.0.0.1", 
             "PORT": 666,
             "BUFSIZE": 512,
         }
